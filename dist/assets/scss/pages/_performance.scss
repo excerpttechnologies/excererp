@@ -1,0 +1,468 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.appraisal-tab {
+    .nav-item {
+        .nav-link {
+            color: variables.$gray-900;
+
+            &.active {
+                background-color: variables.$secondary;
+                color: variables.$white;
+            }
+        }
+
+    }
+}
+
+.appraisal-tab-content {
+    .card {
+        border: 1px solid variables.$gray-200;
+        box-shadow: variables.$box-shadow-xs;
+    }
+}
+
+.policy-upload {
+    padding: 20px;
+    border: 2px dashed variables.$gray-200;
+    border-radius: 5px;
+
+    .policy-upload-bg {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+.payroll-btns {
+    .btn {
+        &.btn-white {
+            &:hover {
+                background-color: variables.$primary;
+                color: variables.$white;
+            }
+
+            &.active {
+                background-color: variables.$secondary;
+                color: variables.$white;
+            }
+        }
+    }
+
+}
+
+.expense-report {
+    position: relative;
+
+    .expense-report-ribbone {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.invoice-report {
+    position: relative;
+
+    .invoice-report-badge {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 5px;
+            height: 40px;
+            gap: 0px;
+            border-radius: 0px 5px 5px 0px;
+            opacity: 0px;
+            background-color: variables.$pink;
+        }
+    }
+
+    .invoice-report-badge-warning {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 5px;
+            height: 40px;
+            gap: 0px;
+            border-radius: 0px 5px 5px 0px;
+            opacity: 0px;
+            background-color: variables.$warning;
+        }
+    }
+
+    .invoice-report-badge-success {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 5px;
+            height: 40px;
+            gap: 0px;
+            border-radius: 0px 5px 5px 0px;
+            opacity: 0px;
+            background-color: variables.$success;
+        }
+    }
+
+    .invoice-report-badge-purple {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 5px;
+            height: 40px;
+            gap: 0px;
+            border-radius: 0px 5px 5px 0px;
+            opacity: 0px;
+            background-color: variables.$purple;
+        }
+    }
+
+    .invoice-report-badge-danger {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 5px;
+            height: 40px;
+            gap: 0px;
+            border-radius: 0px 5px 5px 0px;
+            opacity: 0px;
+            background-color: variables.$danger;
+        }
+    }
+
+    .invoice-report-badge-skyblue {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 5px;
+            height: 40px;
+            gap: 0px;
+            border-radius: 0px 5px 5px 0px;
+            opacity: 0px;
+            background-color: variables.$skyblue;
+        }
+    }
+}
+
+.payment-report-icon {
+    transform: rotate(45deg);
+
+    span {
+
+        transform: rotate(317deg);
+    }
+}
+
+.side-badge {
+    padding-left: 8px;
+    border-left: 4px solid variables.$skyblue;
+}
+
+.side-badge-pink {
+    padding-left: 8px;
+    border-left: 4px solid variables.$pink;
+}
+
+.side-badge-purple {
+    padding-left: 8px;
+    border-left: 4px solid variables.$purple;
+}
+
+.side-badge-warning {
+    padding-left: 8px;
+    border-left: 4px solid variables.$warning;
+}
+
+.payment-total {
+    .task-total-content {
+        position: absolute;
+        top: 38px;
+        left: 37%;
+
+        @include mixins.respond-below(md) {
+            top: 37%;
+            left: 42%;
+        }
+
+        @include mixins.respond-below(sm) {
+            top: 25%;
+            left: 22%;
+        }
+    }
+
+    .payment-total-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.project-report-badge-blue {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        position: absolute;
+        background-color: variables.$skyblue;
+        left: -22px;
+
+    }
+}
+
+.project-report-badge-purple {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        position: absolute;
+        background-color: variables.$purple;
+        left: -22px;
+
+    }
+}
+
+.project-report-badge-warning {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        position: absolute;
+        background-color: variables.$warning;
+        left: -22px;
+
+    }
+}
+
+.project-report-badge-success {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        position: absolute;
+        background-color: variables.$success;
+        left: -22px;
+
+    }
+}
+
+.task-report-icons {
+    span {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+.attendence-icon {
+    span {
+        width: 40px;
+        height: 40px;
+
+        i {
+            font-size: 40px;
+        }
+    }
+}
+
+.leave-report-icon {
+    span {
+        i {
+            font-size: 18px;
+        }
+    }
+}
+
+.contact-icon {
+    li {
+        margin-right: 4px;
+
+        &:hover {
+            .contact-icon-mail {
+                background-color: variables.$primary-transparent;
+
+                span {
+                    i {
+                        color: variables.$primary;
+                    }
+                }
+            }
+
+            .contact-icon-call {
+                background-color: variables.$purple-transparent;
+
+                span {
+                    i {
+                        color: variables.$purple;
+                    }
+                }
+            }
+
+            .contact-icon-msg {
+                background-color: variables.$pink-transparent;
+
+                span {
+                    i {
+                        color: variables.$pink;
+                    }
+                }
+            }
+
+            .contact-icon-skype {
+                background-color: variables.$skyblue-transparent;
+
+                span {
+                    i {
+                        color: variables.$skyblue;
+                    }
+                }
+            }
+
+            .contact-icon-facebook {
+                background-color: variables.$info-transparent;
+
+                span {
+                    i {
+                        color: variables.$info;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+}
+
+.contact-grids-tab {
+    padding: 20px 20px 16px 20px;
+
+    .nav-underline {
+        border-bottom: 1px solid variables.$gray-200 ;
+
+        .nav-item {
+            .nav-link {
+                font-weight: variables.$font-weight-medium;
+
+                &.active {
+                    background-color: variables.$white;
+                    color: variables.$primary;
+                    border-radius: 0;
+                    font-weight: variables.$font-weight-medium;
+                }
+
+                &:hover {
+                    background-color: variables.$white;
+                    color: variables.$primary;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+
+}
+
+.kanban-list-items {
+    border: 1px solid #E8E8E8;
+    box-shadow: 0px 4px 4px 0px rgba(219, 219, 219, 0.2509803922);
+    border-radius: 5px;
+    margin: 0 20px 20px 0;
+    padding: 15px;
+    width: 100%;
+    min-width: 315px;
+}
+.access-tabs{
+    .access-person{
+        .person-content{
+            display: none;
+        }
+        &:checked{
+            .person-content{
+                display: block;
+            }
+        }
+    }
+}
+
+.access-item {
+    .radio-btn {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.access-wrapper {
+    margin-top: 20px;
+}
+.activity-items{
+    a{
+        padding: 4px 16px;
+        border: 1px solid variables.$gray-200;
+        &.active{
+            border: 1px solid variables.$primary;
+            color: variables.$primary;
+            i{
+                color: variables.$primary;
+            }
+        }
+    }
+}
+.input-icon-start {
+    .input-icon-addon{
+        left: 0;
+        right: auto;
+    }
+}
+.pipeline-access-items{
+    max-height: 150px;
+    overflow: auto;
+    .access-content {
+        .form-check-input{
+            &:checked{
+                .access-content{
+                    background-color: variables.$dark-transparent;
+                }
+            }
+        }
+    }
+}

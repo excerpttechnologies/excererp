@@ -1,0 +1,45 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.welcome-wrap {
+    padding: 40px 40px 24px;
+    background: variables.$primary-gradient;
+    @include mixins.rounded(5px);
+    position: relative;
+    z-index: 1;
+    @include mixins.respond-below(md) {
+        padding: 20px 20px 4px;
+    }
+    .welcome-bg-01 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .welcome-bg-01 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .welcome-bg-02 {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        z-index: -1;
+    }
+    .welcome-bg-03 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+#company-chart {
+    .apexcharts-bar-series {
+        .apexcharts-series path {
+            &:hover {
+                fill: variables.$primary;
+            }
+        }
+    }
+}

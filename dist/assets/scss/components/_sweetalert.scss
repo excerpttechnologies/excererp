@@ -1,0 +1,29 @@
+@use "../utils/variables";
+
+.swal2-actions .swal2-confirm.btn:active {
+    background-color: variables.$primary;
+    border-color: variables.$primary;
+}
+.swal2-confirm{
+    margin-right: 5px;
+}
+button.swal2-confirm {
+    background: variables.$primary;
+    border: 1px solid variables.$primary;
+    color: variables.$white;
+    border-radius: 5px;
+    padding: 0.5rem 0.85rem;
+    font-size: 14px;
+    transition: all 0.5s;
+    font-weight: 500;
+}
+button.swal2-cancel {
+    background: variables.$danger;
+    border: 1px solid variables.$danger;
+    color: variables.$white;
+    border-radius: 5px;
+    padding: 0.5rem 0.85rem;
+    font-size: 14px;
+    transition: all 0.5s;
+    font-weight: 500;
+}
