@@ -1,0 +1,48 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.cal-icon{
+    position: relative;
+    i{
+        position: absolute;
+        top: 30%;
+        left: 10px;
+    }
+}
+.action-icon {
+    a {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: variables.$gray-500;
+        @include mixins.rounded(5px);
+        &:hover {
+            background: variables.$light-900;
+            color: variables.$gray-900;
+        }
+    }
+}
+.back-icon{
+    color: variables.$dark;
+    span{
+        width: 12px;
+        height: 12px;
+        background: variables.$dark;
+        color: variables.$white;
+    }
+    &:hover{
+        span{
+            background: variables.$primary;
+            color: variables.$white;
+        }
+    }
+
+}
+.table {
+    .tb-data{
+        color: variables.$gray-500;
+    }
+}

@@ -1,0 +1,77 @@
+@use "sass:color";
+@use "../utils/mixins";
+@use "../utils/variables";
+
+a.edit-icon {
+    width: 22px;
+    height: 22px;
+    @include mixins.rounded(50%);
+    background: variables.$dark-transparent;
+    color: variables.$gray-500;
+    display: inline-flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    &:hover {
+        background: color.adjust(variables.$dark-transparent, $lightness: -7%);
+        color: variables.$gray-500;
+    }
+}
+.emp-dept {
+    .dept-name {
+        margin-right: 8px;
+    }
+    .emp-progress {
+        position: relative;
+        padding-left: 10px;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: variables.$gray-200;
+            width: 1px;
+            height: 100%;
+        }
+        .pro-wrap {
+            padding: 12px 0;
+            border-bottom: 1px dashed variables.$border-color;
+        }
+    }
+}
+.emp-stack {
+    &.progress-stacked {
+        height: 24px;
+        & > .progress {
+            height: 24px;
+        }
+    }
+}
+.recent-item {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.todo-item {
+    &.todo-strike {
+        background: variables.$primary-transparent;
+        .form-check-label {
+            text-decoration: line-through;
+        }
+    }
+    .form-check-label {
+        color: variables.$gray-900;
+    }
+}
+.attendance-canvas {
+    top: 50%;
+    left: 50%;
+    @include mixins.transform(translateX(-50%));
+}
+#myRadarChart {
+    height: 150px;
+}
