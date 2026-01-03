@@ -18,7 +18,8 @@ exports.createInvoice = async (req, res) => {
       amount,
       previousBalance,
       currentBalance,
-      amountInWords
+      amountInWords,
+        invoiceDate
     } = req.body;
 
     // Verify company exists
@@ -60,7 +61,8 @@ exports.createInvoice = async (req, res) => {
       amount,
       previousBalance,
       currentBalance,
-      amountInWords
+      amountInWords,
+        invoiceDate
     });
     
     await invoice.save({ session });
